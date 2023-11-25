@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { React, useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import './App.css'
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import About from './pages/About'
+import Newsletter from './pages/Newsletter'
+import OurRobots from './pages/OurRobots'
+import SupportUs from './pages/SupportUs'
+import Contacts from './pages/Contacts'
 
-function App() {
+export default function App() {
+
+  // On refresh, scroll restarts back to top
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual'
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Navbar />
+      {/* Defines paths to page components */}
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/newsletter' element={<Newsletter />} />
+        <Route path='/our-robots' element={<OurRobots />} />
+        <Route path='/support-us' element={<SupportUs />} />
+        <Route path='/contacts' element={<Contacts />} />
+      </Routes>
+    </>
+  )
 }
-
-export default App;

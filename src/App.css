@@ -1,38 +1,221 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', Courier, monospace;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cyberlions-desktop-header {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cyberlions-desktop-nav {
+  width: 65vw;
+  color: #5a6275;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cyberlions-desktop-nav-logo {
+  font-weight: 700;
+  color: inherit;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  position: absolute;
+  left: 0;
+}
+
+.cyberlions-desktop-nav span {
+  position: absolute;
+  right: 0;
+}
+
+.cyberlions-nav-logo-background {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  background-color: #5a6275;
+}
+
+.cyberlions-desktop-nav-logo img {
+  width: 2.5rem;
+}
+
+.cyberlions-desktop-nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.cyberlions-desktop-nav-links a {
+  padding: 1rem;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  transition: text-underline-offset 0.3s ease;
+}
+
+.cyberlions-desktop-nav-links a:hover {
+  text-underline-offset: 0.4rem;
+}
+
+.active {
+  color: white;
+  border-radius: 1rem;
+  background-color: #5a6275;
+}
+
+.active a {
+  text-decoration: none;
+}
+
+.hero-container {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-container-content {
+  height: 25rem;
+  display: flex;
+  align-items: center;
+
+  gap: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-logo-background {
+  border-radius: 50%;
+  background-color: #5a6275;
+  width: 19rem;
+  height: 19rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container-content img {
+  width: 20rem;
+}
+
+.hero-content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-content-text h1 {
+  color: rgb(219, 31, 31);
+  width: 30rem;
+  font-size: 5rem;
+}
+
+.hero-content-text p {
+  width: 28rem;
+  font-size: 1.8rem;
+}
+
+.hero-section-divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.hero-section-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 152px;
+}
+
+.hero-section-divider .shape-fill {
+  fill: #FFFFFF;
+}
+
+.section-divider {
+  position: relative;
+  width: 100%;
+  height: 1000rem;
+  background-color: #5a6275;
+}
+
+.section-container {
+  margin-top: 20rem;
+  display: flex;
+  justify-content: center;
+}
+
+.horizontal-flip {
+  margin-top: 6rem;
+}
+
+.horizontal-flip .section-container-background {
+  flex-direction: row-reverse;
+}
+
+.section-container-background {
+  box-shadow: 1rem 1rem 4px #4b5161;
+  border-radius: 2.5rem;
+  padding: 2rem;
+  background-color: white;
+  width: 75rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.section-container img {
+  border-radius: 0.5rem;
+  width: 35rem;
+}
+
+.section-container-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-container h1 {
+  color: #3e4350;
+  font-size: 2.5rem;
+}
+
+.section-container p {
+  color: inherit;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.hidden {
+  transform: translateY(100%);
+  transition: transform 0.5s;
+}
+
+.show {
+  transform: translateY(0);
 }

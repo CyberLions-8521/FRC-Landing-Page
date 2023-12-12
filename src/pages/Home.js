@@ -2,6 +2,7 @@ import { React, useEffect } from 'react'
 import logo from '../assets/cyberlions.png'
 import cadding from '../assets/cadding.jpg'
 import kevilry from "../assets/kevilry.jpg"
+import Gallery from "../components/Gallery.js"
 
 export default function Home() {
 
@@ -60,8 +61,12 @@ export default function Home() {
                         </div>
                     </section>
                 </section>
+                <Gallery />
+
             </section>
+            
         </div>
+        
     </>
   )
 }

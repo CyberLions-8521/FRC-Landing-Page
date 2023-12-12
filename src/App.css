@@ -7,6 +7,7 @@
   padding: 0;
   font-family: 'Ubuntu', Courier, monospace;
   scroll-behavior: smooth;
+  outline: 1px solid red;
 }
 
 .cyberlions-desktop-header {
@@ -218,4 +219,18 @@
 
 .show {
   transform: translateY(0);
+}
+
+.gallery {
+  height: 60rem;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.galleryBox {
+  background-color: white;
+  width:100rem;
+  height: 50rem;
 }

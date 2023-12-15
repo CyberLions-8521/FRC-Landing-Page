@@ -1,5 +1,4 @@
 import { React, useEffect } from 'react'
-import logo from '../assets/cyberlions.png'
 import cadding from '../assets/cadding.jpg'
 import kevilry from "../assets/kevilry.jpg"
 
@@ -24,44 +23,46 @@ export default function Home() {
     <>
         <div className='hero-container'>
             <section className='hero-container-content'>
-                <div className='hero-logo-background'>
-                    <img src={logo} alt='hero-logo' />
-                </div>
                 <article className='hero-content-text'>    
-                    <h1>
-                        The Cyberlions;
+                    <h1 className='hidden'>
+                        CYBERLIONS 8521
                     </h1>
-                    <p>
-                        Leading the technical savannah with pride in progress
+                    <p className='hidden'>
+                        Lions Lead. Robots Reign.
                     </p>
                 </article>
+                <article className="hero-content-image">
+                    <span className="image-split" />
+                    <span className="image-split" />
+                    <span className="image-split" />
+                </article>
             </section>
-            <section className='section-divider'>
-                <div className='hero-section-divider'>
-                    <svg data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'>
-                        <path d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z' class='shape-fill'></path>
-                    </svg>
-                </div>
-                <section className='section-container hidden'>
-                    <section className="section-container-background">
-                        <img src={cadding} alt='cadding' />
-                        <div className="section-container-text">    
-                            <h1>We Are A High School Team Based in Westminster, CA</h1>
-                            <p>Founded in 2020, Team 8521 is a robotics team aiming to provide our community with hands-on opportunities and mentorships. We want to empower our community and give them the chance to show their leader and innovator ability.</p>
-                        </div>
-                    </section>
-                </section>
-                <section className='section-container horizontal-flip hidden'>
-                    <section className="section-container-background">
-                        <img src={kevilry} alt='cadding' />
-                        <div className="section-container-text">    
-                            <h1>We Compete In The FIRST Robotics Competition</h1>
-                            <p>FRC is an international competition where teams fundraise, design, build, and program a robot each year to compete in games involving various tasks, which change annually.</p>
-                        </div>
-                    </section>
-                </section>
-            </section>
+            <div className='hero-section-divider'>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#c73737" fill-opacity="1" d="M0,160L80,181.3C160,203,320,245,480,245.3C640,245,800,203,960,154.7C1120,107,1280,53,1360,26.7L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+                </svg>
+            </div>
         </div>
+        <section className='section-divider'>
+            <section className='section-container hidden'>
+                <section className="section-container-background">
+                    <img src={cadding} alt='cadding' />
+                    <div className="section-container-text">    
+                        <h1>We Are A High School Team Based in Westminster, CA</h1>
+                        <p>Founded in 2020, Team 8521 is a robotics team aiming to provide our community with hands-on opportunities and mentorships. We want to empower our community and give them the chance to show their leader and innovator ability.</p>
+                    </div>
+                </section>
+            </section>
+            <section className='section-container horizontal-flip hidden'>
+                <section className="section-container-background">
+                    <img src={kevilry} alt='cadding' />
+                    <div className="section-container-text">    
+                        <h1>We Compete In The FIRST Robotics Competition</h1>
+                        <p>FRC is an international competition where teams fundraise, design, build, and program a robot each year to compete in games involving various tasks, which change annually.</p>
+                    </div>
+                </section>
+            </section>
+        </section>
     </>
   )
 }

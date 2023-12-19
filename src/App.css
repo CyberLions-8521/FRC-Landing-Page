@@ -230,7 +230,56 @@
 }
 
 .galleryBox {
+  border-radius: 4rem;
+  padding:2rem;
   background-color: white;
-  width:100rem;
-  height: 50rem;
+  width:75rem;
+  height: 55rem;
+  font-weight: bold;
+}
+
+.galleryHeader {
+  font-size: 5rem;
+  padding-bottom:2rem;
+}
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.galleryLeft {
+  background-color: rgb(219, 31, 31);
+  height:10rem;
+  width:4rem;
+  border-radius: 2rem 0rem 0rem 2rem;
+}
+
+.galleryRight {
+  background-color: rgb(219, 31, 31);
+  height:10rem;
+  width:4rem;
+  border-radius: 0rem 2rem 2rem 0rem;
+  flex: 0 0 2rem;
+}
+
+.galleryImageContainer {
+  height: 35rem;
+  width:60rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.galleryImage {
+  height:35rem;
+  width:60rem;
+}
+
+.galleryCaption {
+  margin-top:1.5rem;
+  font-size:2rem;
+  color:gray;
+  height:7rem;
+  font-weight: normal;
 }

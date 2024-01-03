@@ -13,9 +13,9 @@ export default function Gallery() {
                 </div>
                 <div className='galleryBody'>
                     <div className='galleryImageContainer'>
-                        <div className='galleryRight'></div>
+                        <div className='galleryArrow galleryRight' onClick={toggleGalleryLeft}></div>
                         <img className='galleryImage' src={Froggers} alt={"Froggers"}></img>
-                        <div className='galleryLeft'></div>
+                        <div className='galleryArrow galleryLeft'></div>
                     </div>
                 </div>
                 <div className='galleryCaption'>Froggers is the first FRC robot we produced in our school. Our robot has the ability to detect and autonomously move towards power cells. In addition, with its intake system, we can collect power cells and transport them around.</div>
@@ -23,4 +23,8 @@ export default function Gallery() {
         </section>
 
     )
+}
+
+let toggleGalleryLeft = () => {
+    alert("hi");
 }
